@@ -1,12 +1,15 @@
 #ifndef STACK_QUE_DS_H
 #define STACK_QUE_DS_H
 
-#include <stdlib.h>
+#define  _GNU_SOURCE
 #include <stdio.h>
 #include <unistd.h>
+#include <sys/types.h>
 #include <string.h>
-#include <stdarg.h>
-
+#include <stdlib.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <ctype.h>
 
 
 #define MAX_LINE_LENGTH 1024
