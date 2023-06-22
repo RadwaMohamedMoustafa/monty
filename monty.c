@@ -46,7 +46,5 @@ int main(int argc, char **argv)
 		}
 	}
 	free_memory();
-
-	printf("No Memery Leack\n");
 	return (0);
 }
