@@ -9,7 +9,7 @@ int pharse_line(char *line)
 
 	instruction_t monty_opcode[] = {
 		{"push", push},
-		{"pall", push},
+		{"pall", pall},
 		{"pint", NULL},
 		{"pop", NULL},
 		{"swap", NULL},
@@ -32,6 +32,13 @@ int pharse_line(char *line)
 		};
 		i++;
 	}
+
+	
+	fprintf(stderr, "L%u: unknown instruction %s\n",
+			memory->line_number, opcode);
+	free_memory();
+	exit(EXIT_FAILURE);
+	return (1);
 
 
 }

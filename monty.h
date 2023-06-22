@@ -86,6 +86,7 @@ int pharse_line(char *line);
 
 /* instruction */
 void push(stack **stack, unsigned int line_number);
+void pall(stack **stack, unsigned int line_number);
 
 /* Strings   */
 int is_alphabetic(char c);

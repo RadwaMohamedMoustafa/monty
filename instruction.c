@@ -23,5 +23,18 @@ void push(stack **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	stack_push(*stack,args);
+}
 
+void pall(stack **st, __attribute__((unused)) unsigned int line_number)
+{
+	stack *s = *st;
+	stack_t *node = s->head;
+
+	if (s->size <=0)
+		return;
+	while (node != NULL)
+	{
+		printf("%d\n", node->n);
+		node = node->next;
+	}
 }
