@@ -2,6 +2,13 @@
 
 Memory *memory;
 
+/**
+ * main - main function.
+ * @argc: count of arguments.
+ * @argv: the arguments.
+ * Return: zero.
+ */
+
 int main(int argc, char **argv)
 {
 	ssize_t read;
@@ -10,7 +17,6 @@ int main(int argc, char **argv)
 	stack_t *s;
 	size_t len = 0;
 
-
 	initMemory();
 	init_stack(&ss);
 	if (argc != 2)
@@ -18,7 +24,6 @@ int main(int argc, char **argv)
 		print_error("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
@@ -29,9 +34,6 @@ int main(int argc, char **argv)
 	}
 	memory->file_ptr = file;
 	memory->stack = ss;
-
-
-
 	while ((read = getline(&memory->line, &len, file)) != -1)
 	{
 		if (read > 1)
@@ -39,12 +41,9 @@ int main(int argc, char **argv)
 			pharse_line(memory->line);
 			memory->line_number++;
 		}
-
 	}
-
 	free_memory();
 
 	printf("No Memery Leack\n");
-	return 0;
-
+	return (0);
 }

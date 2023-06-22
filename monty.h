@@ -26,13 +26,21 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
-typedef struct stack{
+/**
+ * struct stack - stack nodes.
+ * @head: the head of the nodes.
+ * @tail: the tail of the nodes.
+ * @size: the size.
+ *
+ * Description: this struct carries the stack nodes.
+ */
+typedef struct stack
+{
 	struct stack_s *head;
 	struct stack_s *tail;
 	unsigned int size;
 
 } stack;
-
 
 
 /**
@@ -49,10 +57,16 @@ typedef struct instruction_s
 	void (*f)(stack **stack, unsigned int line_number);
 } instruction_t;
 
-
-
-
-
+/**
+ * struct Memory - memory handler.
+ * @file_ptr: the file.
+ * @stack: stack.
+ * @line_number: the line number.
+ * @line: the line.
+ * @args: the arguments.
+ *
+ * Description: carry the memory handlers.
+ */
 typedef struct Memory
 {
 	FILE  *file_ptr;
@@ -62,19 +76,15 @@ typedef struct Memory
 	char *args;
 
 } Memory;
+
 void initMemory(void);
 void free_memory(void);
 extern Memory *memory;
-
 
 void init_stack(stack **s);
 stack_t *stack_push(stack *s, int data);
 stack_t *stack_pop(stack *s);
 void free_stack(stack *s);
-
-
-
-
 
 /* printing */
 void print_error(char *message);
@@ -96,7 +106,7 @@ int is_string_number(char *string);
 
 
 /* utils */
-void check_memory(void * p);
+void check_memory(void *p);
 
 
 /*Testing */

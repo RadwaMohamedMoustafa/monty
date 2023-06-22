@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * pharse_line - check the op_code.
+ * @line: the op_code.
+ * Return: 1 or -1.
+ */
 int pharse_line(char *line)
 {
 	char *opcode;
@@ -33,7 +38,6 @@ int pharse_line(char *line)
 		i++;
 	}
 
-	
 	fprintf(stderr, "L%u: unknown instruction %s\n",
 			memory->line_number, opcode);
 	free_memory();

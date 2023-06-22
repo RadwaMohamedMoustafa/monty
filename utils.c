@@ -1,6 +1,11 @@
 #include "monty.h"
 
-void check_memory(void * p)
+/**
+ * check_memory - checks for the memory.
+ * @p: the string.
+ * Return: void.
+ */
+void check_memory(void *p)
 {
 	if (p == NULL)
 	{
