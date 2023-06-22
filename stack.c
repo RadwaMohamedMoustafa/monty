@@ -80,7 +80,8 @@ stack_t *stack_pop(stack *s)
 void free_stack(stack *s)
 {
 	stack_t *data;
-	if(s == NULL)
+
+	if (s == NULL)
 		return;
 
 	while (s->size > 0)

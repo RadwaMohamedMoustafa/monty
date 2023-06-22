@@ -50,6 +50,6 @@ __attribute__((unused)) unsigned int line_number)
 	while (node != NULL)
 	{
 		printf("%d\n", node->n);
-		node = node->next;
+		node = node->prev;
 	}
 }
