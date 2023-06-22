@@ -59,7 +59,7 @@ typedef struct stack
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(stack **stack, unsigned int line_number);
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
@@ -100,8 +100,8 @@ void print(char *message);
 int pharse_line(char *line);
 
 /* instruction */
-void push(stack **stack, unsigned int line_number);
-void pall(stack **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 
 /* Strings   */
 int is_alphabetic(char c);

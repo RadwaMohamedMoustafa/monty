@@ -21,7 +21,8 @@ void initMemory(void)
  */
 void free_memory(void)
 {
-	fclose(memory->file_ptr);
+	if(memory->file_ptr != NULL)
+		fclose(memory->file_ptr);
 	free_stack(memory->stack);
 	free(memory->line);
 	free(memory);

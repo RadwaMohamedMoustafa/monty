@@ -9,6 +9,7 @@ int pharse_line(char *line)
 {
 	char *opcode;
 	int i = 0;
+	stack_t *ssss;
 
 	instruction_t monty_opcode[] = {
 		{"push", push},
@@ -30,7 +31,7 @@ int pharse_line(char *line)
 	{
 		if (strcmp(opcode, monty_opcode[i].opcode) == 0)
 		{
-			monty_opcode[i].f(&memory->stack, memory->line_number);
+			monty_opcode[i].f(&ssss, memory->line_number);
 			return (-1);
 		};
 		i++;

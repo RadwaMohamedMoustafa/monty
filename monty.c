@@ -20,12 +20,16 @@ int main(int argc, char **argv)
 	init_stack(&ss);
 	if (argc != 2)
 	{
+		free(memory);
+		free(ss);
 		print_error("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
+		free(memory);
+		free(ss);
 		print_error("Error: Can't open file ");
 		print_error(argv[1]);
 		print_error("\n");

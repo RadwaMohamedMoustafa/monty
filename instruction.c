@@ -2,13 +2,15 @@
 
 /**
  * push - implementing the push op_code.
- * @stack: the stack.
+ * @ppp: the stack.
  * @line_number: the number of lines.
  * Return: void.
  */
-void push(stack **stack,__attribute__((unused)) unsigned int line_number)
+void push(__attribute__((unused)) stack_t **ppp,
+__attribute__((unused)) unsigned int line_number)
 {
 	int args;
+	stack *stack = memory->stack;
 
 	if (memory->args != NULL)
 	{
@@ -28,7 +30,7 @@ void push(stack **stack,__attribute__((unused)) unsigned int line_number)
 		free_memory();
 		exit(EXIT_FAILURE);
 	}
-	stack_push(*stack, args);
+	stack_push(stack, args);
 }
 /**
  * pall - implementing the pall op-code.
@@ -37,9 +39,10 @@ void push(stack **stack,__attribute__((unused)) unsigned int line_number)
  * Return: void.
  */
 
-void pall(stack **st, __attribute__((unused)) unsigned int line_number)
+void pall(__attribute__((unused)) stack_t **st,
+__attribute__((unused)) unsigned int line_number)
 {
-	stack *s = *st;
+	stack *s = memory->stack;
 	stack_t *node = s->tail;
 
 	if (s->size <= 0)
