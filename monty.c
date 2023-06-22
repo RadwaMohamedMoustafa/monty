@@ -14,7 +14,6 @@ int main(int argc, char **argv)
 	ssize_t read;
 	stack *ss;
 	FILE *file;
-	stack_t *s;
 	size_t len = 0;
 
 	initMemory();
@@ -34,7 +33,7 @@ int main(int argc, char **argv)
 	}
 	memory->file_ptr = file;
 	memory->stack = ss;
-	while ((read = getline(&memory->line, &len, file)) != -1)
+	while ((read = getline(&(memory->line), &len, file)) != -1)
 	{
 		if (read > 1)
 		{

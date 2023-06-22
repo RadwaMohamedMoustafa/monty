@@ -6,7 +6,7 @@
  * @line_number: the number of lines.
  * Return: void.
  */
-void push(stack **stack, unsigned int line_number)
+void push(stack **stack,__attribute__((unused)) unsigned int line_number)
 {
 	int args;
 
@@ -40,7 +40,7 @@ void push(stack **stack, unsigned int line_number)
 void pall(stack **st, __attribute__((unused)) unsigned int line_number)
 {
 	stack *s = *st;
-	stack_t *node = s->head;
+	stack_t *node = s->tail;
 
 	if (s->size <= 0)
 		return;

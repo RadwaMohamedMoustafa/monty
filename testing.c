@@ -5,7 +5,7 @@
  * @size: the size.
  * Return: void.
  */
-void *mock_malloc(size_t size)
+void *mock_malloc(__attribute__((unused)) size_t size)
 {
 	return (NULL);
 }

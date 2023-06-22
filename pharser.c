@@ -8,9 +8,7 @@
 int pharse_line(char *line)
 {
 	char *opcode;
-	char *intger;
 	int i = 0;
-	stack_t *t;
 
 	instruction_t monty_opcode[] = {
 		{"push", push},
