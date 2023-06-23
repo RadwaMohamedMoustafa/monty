@@ -19,15 +19,16 @@ void rotl(__attribute__((unused)) stack_t **st,
 	{
 		ist = s->head;
         tail = s->tail;
-        f_tail = tail->prev;
 
+        f_tail = tail->prev;
+        f_tail->next = NULL;
 
         ist->prev = tail;
 
         tail->next = ist;
         tail->prev = NULL;
 
-        f_tail->next = NULL;
+     
         
         s->head = tail;
         s->tail = f_tail;
