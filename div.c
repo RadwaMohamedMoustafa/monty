@@ -6,7 +6,7 @@
  * @line_number: the line number.
  * Return: void.
  */
-void div(__attribute__((unused)) stack_t **st,
+void div_op(__attribute__((unused)) stack_t **st,
 		__attribute__((unused)) unsigned int line_number)
 {
 	stack *s = memory->stack;
