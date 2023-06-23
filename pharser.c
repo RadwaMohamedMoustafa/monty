@@ -12,6 +12,7 @@ int pharse_line(char *line)
 	stack_t *ssss;
 
 	instruction_t monty_opcode[] = {
+<<<<<<< HEAD
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
@@ -22,6 +23,13 @@ int pharse_line(char *line)
 		{NULL, NULL},
 		{"nop", NULL},
 		{NULL, NULL}};
+=======
+		{"push", push}, {"pall", pall},
+		{"pint", pint}, {"pop", pop},
+		{"swap", swap}, {"add", add},
+		{"nop", nop}, {"sub", sub},
+		{"div", div_op}, {NULL, NULL}};
+>>>>>>> refs/remotes/origin/master
 
 	line = strtok(line, "\t\n");
 	opcode = strtok(line, " ");
