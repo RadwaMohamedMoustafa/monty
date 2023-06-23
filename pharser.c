@@ -12,28 +12,16 @@ int pharse_line(char *line)
 	stack_t *ssss;
 
 	instruction_t monty_opcode[] = {
-<<<<<<< HEAD
-		{"push", push},
-		{"pall", pall},
-		{"pint", pint},
-		{"pop", pop},
-		{"swap", swap},
-		{"add", add},
-		{"rotl", rotl},
-		{NULL, NULL},
-		{"nop", NULL},
-		{NULL, NULL}};
-=======
 		{"push", push}, {"pall", pall},
 		{"pint", pint}, {"pop", pop},
 		{"swap", swap}, {"add", add},
 		{"nop", nop}, {"sub", sub},
-		{"div", div_op}, {NULL, NULL}};
->>>>>>> refs/remotes/origin/master
+		{"div", div_op}, {"mod", mod},
+		{"mul", mul}, {NULL, NULL}};
 
 	line = strtok(line, "\t\n");
 	opcode = strtok(line, " ");
-	if (!opcode)
+	if (!opcode || opcode[0] == '#')
 		return (0);
 	memory->args = strtok(NULL, " ");
 
@@ -47,8 +35,7 @@ int pharse_line(char *line)
 		i++;
 	}
 
-	fprintf(stderr, "L%u: unknown instruction %s\n",
-			memory->line_number, opcode);
+	fprintf(stderr, "L%u: unknown instruction %s\n", memory->line_number, opcode);
 	free_memory();
 	exit(EXIT_FAILURE);
 	return (1);
