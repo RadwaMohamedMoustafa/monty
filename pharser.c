@@ -10,7 +10,7 @@ int pharse_line(char *line)
 	char *opcode;
 	int i = 0;
 	stack_t *ssss;
-
+	/*pchar*/
 	instruction_t monty_opcode[] = {
 		{"push", push}, {"pall", pall},
 		{"pint", pint}, {"pop", pop},
@@ -18,7 +18,7 @@ int pharse_line(char *line)
 		{"nop", nop}, {"sub", sub},
 		{"div", div_op}, {"mod", mod},
 		{"mul", mul}, {"rotl", rotl},
-		
+		{"pchar", pchar},
 		{NULL, NULL}};
 
 	line = strtok(line, "\t\n");

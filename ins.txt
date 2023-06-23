@@ -1,5 +1,6 @@
 push 10
 push +20
                
-push +21
+push 150
 pall
+pchar
