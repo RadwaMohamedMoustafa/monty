@@ -121,6 +121,8 @@ void swap(__attribute__((unused)) stack_t **st,
 void add(__attribute__((unused)) stack_t **st,
 		__attribute__((unused)) unsigned int line_number);
 
+void rotl(__attribute__((unused)) stack_t **st,
+		__attribute__((unused)) unsigned int line_number);
 /*Testing */
 void *mock_malloc(size_t size);
 #endif

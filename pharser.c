@@ -18,6 +18,7 @@ int pharse_line(char *line)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"rotl", rotl},
 		{NULL, NULL},
 		{"nop", NULL},
 		{NULL, NULL}};
