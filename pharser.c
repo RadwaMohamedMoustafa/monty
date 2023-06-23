@@ -18,8 +18,8 @@ int pharse_line(char *line)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{NULL, NULL},
-		{"nop", NULL},
 		{NULL, NULL}};
 
 	line = strtok(line, "\t\n");
