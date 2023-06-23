@@ -119,7 +119,7 @@ void swap(stack_t **st, unsigned int line_number);
 
 void add(stack_t **st, unsigned int line_number);
 
-
+void rotr(stack_t **st, unsigned int line_number);
 void rotl(stack_t **st, unsigned int line_number);
 
 /* nop */
