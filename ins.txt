@@ -1,6 +1,10 @@
 push 10
 push +20
                
-push 150
+push 0
+push 97
+push 98
+push 99
+push 100
 pall
-pchar
+pstr

@@ -139,6 +139,7 @@ void mod(stack_t **st, unsigned int line_number);
 
 void pchar(stack_t **st, unsigned int line_number);
 
+void pstr(stack_t **st, unsigned int line_number);
 
 /*Testing */
 void *mock_malloc(size_t size);
