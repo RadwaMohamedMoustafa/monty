@@ -9,7 +9,7 @@ void rotl(__attribute__((unused)) stack_t **st,
 		__attribute__((unused)) unsigned int line_number)
 {
 	stack *s = memory->stack;
-	stack_t *ist,*f_tail,*tail;
+	stack_t *ist, *f_tail, *tail;
 
 	if (s->size <= 1)
 	{
@@ -18,18 +18,18 @@ void rotl(__attribute__((unused)) stack_t **st,
 	else
 	{
 		ist = s->head;
-        tail = s->tail;
-        f_tail = tail->prev;
+		tail = s->tail;
+		f_tail = tail->prev;
 
 
-        ist->prev = tail;
+		ist->prev = tail;
 
-        tail->next = ist;
-        tail->prev = NULL;
+		tail->next = ist;
+		tail->prev = NULL;
 
-        f_tail->next = NULL;
-        
-        s->head = tail;
-        s->tail = f_tail;
-    }
+		f_tail->next = NULL;
+
+		s->head = tail;
+		s->tail = f_tail;
+	}
 }

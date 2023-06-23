@@ -115,35 +115,27 @@ int is_string_number(char *string);
 void check_memory(void *p);
 
 /* Swap */
-void swap(__attribute__((unused)) stack_t **st,
-		__attribute__((unused)) unsigned int line_number);
+void swap(stack_t **st, unsigned int line_number);
 
-void add(__attribute__((unused)) stack_t **st,
-		__attribute__((unused)) unsigned int line_number);
+void add(stack_t **st, unsigned int line_number);
 
 
-void rotl(__attribute__((unused)) stack_t **st,
-		__attribute__((unused)) unsigned int line_number);
+void rotl(stack_t **st, unsigned int line_number);
 
 /* nop */
-void nop(__attribute__((unused)) stack_t **st,
-                __attribute__((unused)) unsigned int line_number);
+void nop(stack_t **st, unsigned int line_number);
 
 /* sub */
-void sub(__attribute__((unused)) stack_t **st,
-                __attribute__((unused)) unsigned int line_number);
+void sub(stack_t **st, unsigned int line_number);
 
 /* div */
-void div_op(__attribute__((unused)) stack_t **st,
-                __attribute__((unused)) unsigned int line_number);
+void div_op(stack_t **st, unsigned int line_number);
 
 /* mul */
-/*void mul(__attribute__((unused)) stack_t **st,
-                __attribute__((unused)) unsigned int line_number);*/
+void mul(stack_t **st, unsigned int line_number);
 
 /* mod */
-void mod(__attribute__((unused)) stack_t **st,
-                __attribute__((unused)) unsigned int line_number);
+void mod(stack_t **st, unsigned int line_number);
 
 /*Testing */
 void *mock_malloc(size_t size);
