@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	{
 		free(memory);
 		free(ss);
-		print_error("USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
@@ -30,9 +30,7 @@ int main(int argc, char **argv)
 	{
 		free(memory);
 		free(ss);
-		print_error("Error: Can't open file ");
-		print_error(argv[1]);
-		print_error("\n");
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	memory->file_ptr = file;
