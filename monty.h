@@ -118,6 +118,9 @@ void check_memory(void *p);
 void swap(__attribute__((unused)) stack_t **st,
 		__attribute__((unused)) unsigned int line_number);
 
+void add(__attribute__((unused)) stack_t **st,
+		__attribute__((unused)) unsigned int line_number);
+
 /*Testing */
 void *mock_malloc(size_t size);
 #endif
