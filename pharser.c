@@ -19,7 +19,7 @@ int pharse_line(char *line)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
-		{NULL, NULL},
+		{"sub", sub},
 		{NULL, NULL}};
 
 	line = strtok(line, "\t\n");
