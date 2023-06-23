@@ -6,7 +6,7 @@
  */
 void initMemory(void)
 {
-	memory = (Memory *)malloc(sizeof(Memory));
+	memory = malloc(sizeof(Memory));
 	check_memory(memory);
 	memory->file_ptr = NULL;
 	memory->stack = NULL;
