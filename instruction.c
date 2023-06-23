@@ -90,10 +90,12 @@ void pop(__attribute__((unused)) stack_t **st,
 __attribute__((unused)) unsigned int line_number)
 {
 	stack *s = memory->stack;
+	stack_t *t;
 
 	if (s->size > 0)
 	{
-		stack_pop(s);
+		t = stack_pop(s);
+		free(t);
 	}
 	else
 	{
