@@ -78,3 +78,27 @@ __attribute__((unused)) unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 }
+
+
+/**
+ * pop - implementing the pall op-code.
+ * @st: the stack.
+ * @line_number: the line number.
+ * Return: void.
+ */
+void pop(__attribute__((unused)) stack_t **st,
+__attribute__((unused)) unsigned int line_number)
+{
+	stack *s = memory->stack;
+
+	if (s->size > 0)
+	{
+		stack_pop(s);
+	}
+	else
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", memory->line_number);
+		free_memory();
+		exit(EXIT_FAILURE);
+	}
+}

@@ -1,1 +1,7 @@
-pint
+push 10
+push 11
+push 12
+push 13
+pall
+pop
+pall

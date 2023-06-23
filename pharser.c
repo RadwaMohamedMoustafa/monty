@@ -15,6 +15,7 @@ int pharse_line(char *line)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL},
 		{"pop", NULL},
 		{"swap", NULL},
