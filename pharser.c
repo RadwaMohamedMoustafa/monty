@@ -16,7 +16,8 @@ int pharse_line(char *line)
 		{"pint", pint}, {"pop", pop},
 		{"swap", swap}, {"add", add},
 		{"nop", nop}, {"sub", sub},
-		{"div", div_op}, {NULL, NULL}};
+		{"div", div_op}, {"mod", mod},
+		{NULL, NULL}};
 
 	line = strtok(line, "\t\n");
 	opcode = strtok(line, " ");
