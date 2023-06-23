@@ -114,6 +114,9 @@ int is_string_number(char *string);
 /* utils */
 void check_memory(void *p);
 
+/* Swap */
+void swap(__attribute__((unused)) stack_t **st,
+		__attribute__((unused)) unsigned int line_number);
 
 /*Testing */
 void *mock_malloc(size_t size);

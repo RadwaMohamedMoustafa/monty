@@ -65,7 +65,7 @@ stack_t *stack_pop(stack *s)
 	s->tail = temp;
 
 	if (s->size > 1)
-	temp->next = NULL;
+		temp->next = NULL;
 
 	s->size--;
 

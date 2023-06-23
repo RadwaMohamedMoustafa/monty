@@ -7,7 +7,7 @@
  * Return: void.
  */
 void push(__attribute__((unused)) stack_t **ppp,
-__attribute__((unused)) unsigned int line_number)
+		__attribute__((unused)) unsigned int line_number)
 {
 	int args;
 	stack *stack = memory->stack;
@@ -40,7 +40,7 @@ __attribute__((unused)) unsigned int line_number)
  */
 
 void pall(__attribute__((unused)) stack_t **st,
-__attribute__((unused)) unsigned int line_number)
+		__attribute__((unused)) unsigned int line_number)
 {
 	stack *s = memory->stack;
 	stack_t *node = s->tail;
@@ -62,7 +62,7 @@ __attribute__((unused)) unsigned int line_number)
  * Return: void.
  */
 void pint(__attribute__((unused)) stack_t **st,
-__attribute__((unused)) unsigned int line_number)
+		__attribute__((unused)) unsigned int line_number)
 {
 	stack *s = memory->stack;
 	stack_t *node = s->tail;
@@ -87,7 +87,7 @@ __attribute__((unused)) unsigned int line_number)
  * Return: void.
  */
 void pop(__attribute__((unused)) stack_t **st,
-__attribute__((unused)) unsigned int line_number)
+		__attribute__((unused)) unsigned int line_number)
 {
 	stack *s = memory->stack;
 	stack_t *t;
