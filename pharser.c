@@ -21,7 +21,7 @@ int pharse_line(char *line)
 
 	line = strtok(line, "\t\n");
 	opcode = strtok(line, " ");
-	if (!opcode)
+	if (!opcode && opcode[0] == '#')
 		return (0);
 	memory->args = strtok(NULL, " ");
 
