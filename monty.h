@@ -129,6 +129,17 @@ void nop(__attribute__((unused)) stack_t **st,
 void sub(__attribute__((unused)) stack_t **st,
                 __attribute__((unused)) unsigned int line_number);
 
+/* div */
+void div(__attribute__((unused)) stack_t **st,
+                __attribute__((unused)) unsigned int line_number);
+
+/* mul */
+void mul(__attribute__((unused)) stack_t **st,
+                __attribute__((unused)) unsigned int line_number);
+
+/* mod */
+void mod(__attribute__((unused)) stack_t **st,
+                __attribute__((unused)) unsigned int line_number)
 /*Testing */
 void *mock_malloc(size_t size);
 #endif

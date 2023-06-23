@@ -12,15 +12,11 @@ int pharse_line(char *line)
 	stack_t *ssss;
 
 	instruction_t monty_opcode[] = {
-		{"push", push},
-		{"pall", pall},
-		{"pint", pint},
-		{"pop", pop},
-		{"swap", swap},
-		{"add", add},
-		{"nop", nop},
-		{"sub", sub},
-		{NULL, NULL}};
+		{"push", push}, {"pall", pall},
+		{"pint", pint}, {"pop", pop},
+		{"swap", swap}, {"add", add},
+		{"nop", nop}, {"sub", sub},
+		{"div", div}, {NULL, NULL}};
 
 	line = strtok(line, "\t\n");
 	opcode = strtok(line, " ");
