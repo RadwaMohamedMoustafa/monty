@@ -10,7 +10,6 @@ void swap(__attribute__((unused)) stack_t **st,
 		__attribute__((unused)) unsigned int line_number)
 {
 	stack *s = memory->stack;
-	stack_t *t;
 	int temp;
 
 	if (s->size > 1)
