@@ -29,7 +29,7 @@ int is_string_number(char *string)
 {
 	if (!string || *string == '\0')
 		return (0);
-	if (*string == '-')
+	if (*string == '-' || *string == '+')
 		string++;
 	while (*string)
 	{
