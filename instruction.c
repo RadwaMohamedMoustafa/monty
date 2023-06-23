@@ -53,3 +53,28 @@ __attribute__((unused)) unsigned int line_number)
 		node = node->prev;
 	}
 }
+
+
+/**
+ * pint - implementing the pall op-code.
+ * @st: the stack.
+ * @line_number: the line number.
+ * Return: void.
+ */
+void pint(__attribute__((unused)) stack_t **st,
+__attribute__((unused)) unsigned int line_number)
+{
+	stack *s = memory->stack;
+	stack_t *node = s->tail;
+
+	if (s->size > 0)
+	{
+		printf("%d\n", node->n);
+	}
+	else
+	{
+		fprintf(stderr, "L%u: can't pint, stack empty\n", memory->line_number);
+		free_memory();
+		exit(EXIT_FAILURE);
+	}
+}

@@ -14,8 +14,8 @@ int pharse_line(char *line)
 	instruction_t monty_opcode[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL},
-		{"pint", NULL},
 		{"pop", NULL},
 		{"swap", NULL},
 		{"add", NULL},
